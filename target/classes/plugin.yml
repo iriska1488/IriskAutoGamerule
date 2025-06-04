@@ -1,0 +1,6 @@
+name: IriskAutoGamerule
+version: 1.0
+main: wtf.iriska.IriskAutoGamerule
+api-version: 1.16
+description: Автоматически отключает указанные геймрулы во всех мирах сервера
+author: Iriska
