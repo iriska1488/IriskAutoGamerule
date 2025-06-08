@@ -45,13 +45,14 @@ public class IriskAutoGamerule extends JavaPlugin {
 
     private void checkAndDisableGamerules() {
         for (World world : Bukkit.getWorlds()) {
-            // Общие геймрулы для всех миров
+            // Общие геймрулы для ВСЕХ миров
             checkAndDisableGamerule(world, GameRule.MOB_GRIEFING, false);
             checkAndDisableGamerule(world, GameRule.DO_FIRE_TICK, false);
             checkAndDisableGamerule(world, GameRule.ANNOUNCE_ADVANCEMENTS, false);
             checkAndDisableGamerule(world, GameRule.SHOW_DEATH_MESSAGES, false);
             checkAndDisableGamerule(world, GameRule.DO_INSOMNIA, false);
             checkAndDisableGamerule(world, GameRule.DISABLE_ELYTRA_MOVEMENT_CHECK, true);
+            checkAndDisableGamerule(world, GameRule.DO_IMMEDIATE_RESPAWN, true); // Моментальный респавн
 
             // Проверяем, является ли мир специальным
             boolean isSpecialWorld = specialWorlds.stream()
